@@ -8,4 +8,4 @@ server.use(routes);
 
 server.listen(3001, () => {
   console.log('🔥 server started at http://localhost:3001');
-})
+});
