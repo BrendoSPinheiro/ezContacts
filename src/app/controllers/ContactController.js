@@ -1,6 +1,6 @@
 class ContactController {
   index(request, response) {
-    response.send('Contact Controller Index Method');
+    response.json({ ok: true });
   }
 
   show() {
