@@ -7,8 +7,16 @@ class ContactController {
     response.json(contacts);
   }
 
-  show() {
+  async show(request, response) {
+    const { id } = request.params;
 
+    const contact = await ContactRepository.findById(id);
+
+    if (!contact) {
+      return response.status(404).json({ error: 'Contact not found' });
+    }
+
+    response.json(contact);
   }
 
   store() {
