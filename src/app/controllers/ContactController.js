@@ -42,4 +42,5 @@ class ContactController {
   }
 }
 
+// Singleton - Diz que nós só podemos ter apenas 1 única instância de uma classe
 module.exports = new ContactController();
